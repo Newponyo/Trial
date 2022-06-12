@@ -62,7 +62,7 @@ option = st.selectbox(
      '何を表示させますか？？',
      ('参加者の構成', '学年', '民間移管への関心とその理由', "民間移管に対する気持ちとその理由", "民間移管の実情に対する理解", "行事について", "民間移管への関心の変化", "良かった点", "要改善点", "その他"))
 
-st.write('選択されたもの:', option)
+# st.write('選択されたもの:', option)
 
 
 if option == '参加者の構成':
@@ -88,6 +88,12 @@ elif option == '民間移管への関心とその理由':
         color='blue', width=0.6, alpha=0.6, fontname="MS Gothic")
     st.subheader('民間移管への関心')
     st.pyplot(fig)
+
+    for reason in range(0, len(df["民間移管への関心の理由"])):
+        if df["民間移管への関心の理由"][reason] is np.nan:
+            pass
+        else:
+            print(f"・{df['民間移管への関心の理由'][reason]}")
 
 
 
