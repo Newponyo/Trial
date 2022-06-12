@@ -69,7 +69,7 @@ if option == '参加者の構成':
 
     fig, ax = plt.subplots()
     ax.bar(x=["SHIBA", "SHIBA_OB", "TAISHI", "TAISHI_OB"], height=member,
-        color='green', width=0.6, alpha=0.6)
+        color='green', width=0.6, alpha=0.6, fontname="MS Gothic")
     st.subheader('参加者の構成')
     st.pyplot(fig)
 
@@ -77,7 +77,7 @@ elif option == '学年':
 
     fig, ax = plt.subplots()
     ax.bar(x=["0-1歳児", "2歳児", "3歳児", "4歳児", "5歳児", "OB"], height=grade,
-        color='blue', width=0.6, alpha=0.6)
+        color='blue', width=0.6, alpha=0.6, fontname="MS Gothic")
     st.subheader('学年')
     st.pyplot(fig)
 
@@ -85,25 +85,11 @@ elif option == '民間移管への関心とその理由':
 
     fig, ax = plt.subplots()
     ax.bar(x=["とても関心がある", "関心がある", "あまり関心がない"], height=concern,
-        color='blue', width=0.6, alpha=0.6)
+        color='blue', width=0.6, alpha=0.6, fontname="MS Gothic")
     st.subheader('民間移管への関心')
     st.pyplot(fig)
 
-    print(len(df["民間移管への関心の理由"]))
-    print(df["民間移管への関心の理由"][0])
-    print(df["民間移管への関心の理由"][1])
-    print(df["民間移管への関心の理由"][2])
-    print(df["民間移管への関心の理由"][3])
-    print(df["民間移管への関心の理由"][4])
-    print(df["民間移管への関心の理由"][5])
-    print(df["民間移管への関心の理由"][6])
-    print(df["民間移管への関心の理由"][7])
-    print(df["民間移管への関心の理由"][8])
-    print(df["民間移管への関心の理由"][9])
-    
 
-    #for i in len(df["民間移管への関心の理由"]):
-     #   print(i)
 
 
 
